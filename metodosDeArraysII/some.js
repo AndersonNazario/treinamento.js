@@ -5,6 +5,7 @@ const minhaFuncaoCallback = (nomes) => {
 }
 const resultado = nomes.some(minhaFuncaoCallback);
 */
+// some valida se tem um valos na igual 
 const resultado = nomes.some((nome) => {
     return nome === 'Anderson';
 });
