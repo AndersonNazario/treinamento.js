@@ -6,11 +6,12 @@ const modelosCarro = [
 ];
 
 const validarCarro = (marcaDocarro, marcas) => {
-    return marcaDocarro.find((modelosCarro) => {
+    const resultadoPesquisa = marcaDocarro.find((modelosCarro) => {
         return modelosCarro.marca === marcas;
     })
+    console.log(resultadoPesquisa);
 };
 
 
-const resultadoPesquisa = validarCarro(modelosCarro, 'Ferrari');
-console.log(resultadoPesquisa);
+validarCarro(modelosCarro, 'Ferrari');
+//{ marca: 'Ferrari', ano: 2022, cor: 'Vermelha', porta: 3 }
