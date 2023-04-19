@@ -1,5 +1,6 @@
 // Executar a função callback passada como argumento para cada elemento do array e retorna um 
 //novo array como resultado.
+// cria um novo array | não altera o original
 
 const usuarios = [
     { nome: 'Guido', sobrenome: 'Cerqueira', idade: 20 },
