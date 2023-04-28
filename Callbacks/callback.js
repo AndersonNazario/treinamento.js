@@ -3,8 +3,7 @@ const imprimirNome = (funcaoCallback) => {
     const idade = 31;
     funcaoCallback(nome, idade);
 }
-
-imprimirNome((buscarNome, buscarIdade) => {
+const dados = (buscarNome, buscarIdade) => {
     console.log('A função foi executada');
 
     if (buscarNome) {
@@ -13,4 +12,6 @@ imprimirNome((buscarNome, buscarIdade) => {
     if (buscarIdade) {
         console.log(`Idade: ${buscarIdade}`);
     }
-});
+};
+
+imprimirNome(dados);
