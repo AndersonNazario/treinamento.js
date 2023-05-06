@@ -7,13 +7,12 @@ const professores = [
     { id: 3, nome: 'Andrei', stack: 'Frontend' },
     { id: 4, nome: 'Ana', stack: 'Backend' },
 ];
-
+// localhost:3000/professores
 app.get('/professores', (requisicao, resposta) => {
     resposta.send(professores);
 });
-
+// localhost:3000/professores/:id
 app.get('/professores/:id', (requisicao, resposta) => {
-    //console.log(requisicao.params.id);
     const profssorEncontrado = professores.find((professor) => {
         return professor.id === Number(requisicao.params.id);
     });
