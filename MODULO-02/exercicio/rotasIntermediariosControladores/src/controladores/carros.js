@@ -31,7 +31,17 @@ const obterCarro = (requisicao, resposta) => {
     resposta.send(carroEncontrado);
 }
 
+const senha = (requisicao, resposta) => {
+    const validarSenha = "carros123";
+    const { senha } = requisicao.params;
+
+    if (senha !== validarSenha) {
+        return console.log(`senha incorreta snha${senha} senha informada:${validarSenha}`);
+    }
+};
+
 module.exports = {
     listagemCarro,
     obterCarro,
+    senha
 }
