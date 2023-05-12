@@ -86,6 +86,24 @@ const atualizarStatusDoIntrutor = (req, res) => {
 
     return res.status(204).json();
 }
+//deletar
+const excluirInstrutor = (req, res) => {
+    const { id } = req.params;
+
+    const instrutor = bancoDeDados.instrutores.find((idInstrutor) => {
+        return idInstrutor.id === Number(id);
+    });
+
+    if (!instrutor) {
+        return res.status(404).json({ mensagem: `instrutor não encontrado.` })
+    }
+
+    bancoDeDados.instrutores = bancoDeDados.instrutores.filter((instrutor) => {
+        return instrutor.id !== Number(id);
+    });
+
+    return res.status(204).send();
+}
 
 module.exports = {
     listarInstrutores,
@@ -93,4 +111,5 @@ module.exports = {
     cadastrarInstrutor,
     editarInstrutor,
     atualizarStatusDoIntrutor,
+    excluirInstrutor,
 };

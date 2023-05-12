@@ -10,5 +10,6 @@ rotas.get('/instrutores/:id', instrutores.obterInstrutor);//ver um recurso espec
 rotas.post('/instrutores', instrutores.cadastrarInstrutor);//adicionar recurso dentro de uma coleção
 rotas.put('/instrutores/:id', instrutores.editarInstrutor);//editar todo o recurço especifico
 rotas.patch('/instrutores/:id/status', instrutores.atualizarStatusDoIntrutor);//editar uma parte do recurço escolhido
+rotas.delete('/instrutores/:id', instrutores.excluirInstrutor)//deletar 
 
 module.exports = rotas;
