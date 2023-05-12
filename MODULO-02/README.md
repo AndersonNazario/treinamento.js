@@ -1,13 +1,15 @@
 - npm init -y
 - npm install para instalar os pacotes EX:(express)
+-module.exports{} // para expostar
 - const express = require('express'); para importa a blibrioteca para o codigo
 - const app = express(); estanciar o express
+
 
 - .gitignore Para iginorar os aquivos que não devem ser encaminhado para o git
 
 
 > pacote 
->express // npm install para instalar os pacotes EX:(express)
+>express // npm install para instalar os pacotes EX:(express) 
 >nodemon // npm install -D nodemon
 
 >nodemon[
@@ -23,3 +25,10 @@
 >insomnia[
 
 ]
+
+//intermediario
+//const { validarSenha
+//} = require('./intermediarios');
+
+//intermediario 
+//app.use(validarSenha);//é usado o use();
