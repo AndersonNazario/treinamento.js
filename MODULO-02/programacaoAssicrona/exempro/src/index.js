@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const { getCityFromZipcode } = require('utils-playground');
+const { getCityFromZipcode, getPackageDescriptionNpm } = require('utils-playground');
 
 
 app.get('/', async (req, res) => {
@@ -11,5 +11,13 @@ app.get('/', async (req, res) => {
     const [resposta1, resposta2] = promise;
     res.send(`A cidade encontarda foi: ${resposta1} e ${resposta2} `)
 });
+
+app.get('/pacote/:nomePacote', async (req, res) => {
+    const { nomePacote } = req.params;
+
+    const desclicaoDoPacote = await getPackageDescriptionNpm(nomePacote);
+
+    return res.send(desclicaoDoPacote);
+})
 
 app.listen(3000)
