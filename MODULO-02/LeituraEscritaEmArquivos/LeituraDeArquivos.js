@@ -14,4 +14,5 @@ fs.readFile('./ArquivoDeTexto/ArquivoDeTexto.txt', (erro, data) => {
         console.log(data.toString());
     }
 });
+
 console.log('Depois de ler');
