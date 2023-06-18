@@ -2,6 +2,7 @@ const fs = require('fs/promises');
 
 (async function () {
     const arquivosJson = await fs.readFile('./teste.json');
+    //tasforma em objeto JSON.parse(arquivosJson);
     const pessoas = JSON.parse(arquivosJson);
     console.log(arquivosJson.toString());
     console.log("--------------")
