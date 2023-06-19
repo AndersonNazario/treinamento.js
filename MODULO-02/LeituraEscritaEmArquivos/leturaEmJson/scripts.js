@@ -15,7 +15,7 @@ const fs = require('fs/promises');
         idade: 26
     })
     console.log(pessoas);
-    //transformar em arquivo json stringify
+    //Para transformar em JSON novaente JSON.stringify(pessoas);
     const arrayJson = JSON.stringify(pessoas);
     console.log("--------------")
     console.log(arrayJson);
