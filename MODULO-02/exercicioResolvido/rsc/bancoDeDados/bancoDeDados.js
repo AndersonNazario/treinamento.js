@@ -8,3 +8,5 @@ const produtos = [
     { id: 7, nome: "Webcam C920s", valor: 80000 },
     { id: 8, nome: "Monitor LG 29 FHD", valor: 129900 },
 ]
+
+module.exports = produtos;
